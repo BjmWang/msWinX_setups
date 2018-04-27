@@ -1,23 +1,12 @@
 # msWinX_setups
 to setup MS Windows 10 (R)
 
+## WSL
 ### Install applications:
 ``` shell
 sudo su
 apt-get -y install wget tcllib golang openvpn pep8 ufw tmux zsh fish gnuplot openssl openssh-client pandoc gdb git zip gdebi auctex clamav aspell exuberant-ctags vim curl libav-tools default-jre default-jdk kismet libpam-mount sl fortune-mod meld hdf5-tools libav-tools at axel gnupg octave aria2 unzip python3-pip python3 golang-1.8
 ```
-
-### swift `CapsLock` to`Esc`
-
-```
-Windows Registry Editor Version 5.00 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout] 
-"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,01,00,3a,00,00,00,00,00
-```
-
-- save the above content to `caps2esc.reg`
-- double click `caps2esc.reg` to run it
-- confirm
 
 ### fish
 ```
@@ -111,6 +100,19 @@ if test -r ~/.config/fish/local.fish
   . "~/.config/fish/local.fish"
 end
 ```
+
+## onsite
+### swift `CapsLock` to`Esc`
+
+```
+Windows Registry Editor Version 5.00 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout] 
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,01,00,3a,00,00,00,00,00
+```
+
+- save the above content to `caps2esc.reg`
+- double click `caps2esc.reg` to run it
+- confirm
 
 ### Vimrc
 - install `Vim` to `D:\Vim` (donot install to `C:`)
