@@ -2,10 +2,14 @@
 to setup MS Windows 10 (R)
 
 ## WSL
+### Install `Python`:
+- Download `Anaconda` from [here](https://anaconda.com/download/),  and
+- install it following [this instruction](https://docs.anaconda.com/anaconda/install/) .
+
 ### Install applications:
 ``` shell
 sudo su
-apt-get -y install wget tcllib golang openvpn pep8 ufw tmux zsh fish gnuplot openssl openssh-client pandoc gdb git zip gdebi auctex clamav aspell exuberant-ctags vim curl libav-tools default-jre default-jdk kismet libpam-mount sl fortune-mod meld hdf5-tools libav-tools at axel gnupg octave aria2 unzip python3-pip python3 golang-1.8
+apt-get -y install wget tcllib golang openvpn pep8 ufw tmux zsh fish gnuplot openssl openssh-client pandoc gdb git zip gdebi auctex clamav aspell exuberant-ctags vim emacs curl libav-tools default-jre default-jdk kismet libpam-mount sl fortune-mod meld hdf5-tools libav-tools at axel gnupg octave aria2 unzip python3-pip python3 golang-1.8
 ```
 
 ### fish
@@ -25,7 +29,7 @@ set -x GOBIN $GOPATH/bin
 set -x PATH /usr/lib/go-1.8/bin $PATH
 set -x PATH $PATH $GOBIN
 # Misc.
-#set -gx PATH $HOME/anaconda/bin $PATH
+set -gx PATH $HOME/anaconda3/bin $PATH
 #set -gx PATH $HOME/tensorflow/bin $PATH
 #set -gx PATH /opt/android-studio/bin $PATH
 # ---
@@ -692,4 +696,4 @@ augroup LargeFile
 augroup END
 ```
 
-### have fun!
+### Have fun!
