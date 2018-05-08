@@ -5,6 +5,8 @@ to setup MS Windows 10 (R)
 ### Install `Python`:
 - Download `Anaconda` from [here](https://anaconda.com/download/),  and
 - install it following [this instruction](https://docs.anaconda.com/anaconda/install/) .
+- Install tensorflow `pip install tensorflow`.
+- Put [the init script](https://github.com/BjmWang/Ubuntu_setups/blob/master/lang/10_python3_startup.py) into `~/.ipython/profile_default/startup`, and uncomment `mpl.use('Agg')`.
 
 ### Install applications:
 ``` shell
@@ -695,5 +697,4 @@ augroup LargeFile
                 \ endif
 augroup END
 ```
-
 ### Have fun!
