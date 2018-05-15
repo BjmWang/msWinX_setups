@@ -23,6 +23,14 @@ export https_proxy=https://10.81.6.30:8080
 export PATH="/home/mw/anaconda3/bin:$PATH"
 ```
 
+#### apt-proxy
+`sudo vi /etc/apt/apt.conf.d/95proxies`
+
+```
+Acquire::http::proxy "http://10.81.6.30:8080";
+Acquire::https::proxy "https://10.81.6.30:8080";
+```
+
 #### fish
 ```
 # ~/.config/fish/config.fish
@@ -706,4 +714,5 @@ augroup LargeFile
                 \ endif
 augroup END
 ```
+
 ### Have fun!
