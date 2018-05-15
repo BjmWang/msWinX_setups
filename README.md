@@ -14,7 +14,16 @@ sudo su
 apt-get -y install wget tcllib golang openvpn pep8 ufw tmux zsh fish gnuplot openssl openssh-client pandoc gdb git zip gdebi auctex clamav aspell exuberant-ctags vim emacs curl libav-tools default-jre default-jdk kismet libpam-mount sl fortune-mod meld hdf5-tools libav-tools at axel gnupg octave aria2 unzip python3-pip python3 golang-1.8
 ```
 
-### fish
+### shell
+#### bash
+```
+export http_proxy=http://10.81.6.30:8080
+export https_proxy=https://10.81.6.30:8080
+
+export PATH="/home/mw/anaconda3/bin:$PATH"
+```
+
+#### fish
 ```
 # ~/.config/fish/config.fish
 
