@@ -7,7 +7,7 @@
 - W.P.S.
 - winrar
 - XunLei
-- Win updates
+- Visual Studio buildtool & code
 - WSL - openSUSE
 - golang
 - rust
