@@ -1,0 +1,15 @@
+- Anaconda3
+- Chrome
+- geany
+- gvim
+- emacs
+- PDFXVwer
+- W.P.S.
+- winrar
+- XunLei
+- Win updates
+- WSL - openSUSE
+- golang
+- rust
+- git
+- firefox
