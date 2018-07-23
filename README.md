@@ -140,12 +140,13 @@ Windows Registry Editor Version 5.00
 ### Vimrc
 - install `Vim` to `D:\Vim` (donot install to `C:`)
 - backup `D:\Vim\_vimrc`
+- put [plug.vim](https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim) into `D:\Vim\vim81\plugin\`
 - creat the new `D:\Vim\_vimrc`:
 ```
 " VINE """""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " mw's Vim configuration,
-"   ms win version --- no plugins
+"     for processing tex/pdf, and coding in Golang & Python
 "
 " Based on Amir Salihefendic's basic.vimrc
 "     https://github.com/amix/vimrc
@@ -154,7 +155,7 @@ Windows Registry Editor Version 5.00
 " and many other internet resources.
 "
 " COPYRIGHT  B.W.  2010-2018
-" https://github.com/BjmWang/msWinX_setups
+" https://github.com/BjmWang/setup_Ubuntu
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -180,6 +181,117 @@ set autoread
 " set the leader
 let mapleader = ","
 let g:mapleader = ","
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
+"  'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+call plug#begin()
+    "" surround
+        Plug 'tpope/vim-surround'
+    "" exchange
+        Plug 'tommcdo/vim-exchange'
+    "" multiple-cursors
+        "Plug 'terryma/vim-multiple-cursors'
+    "" auto-align
+        Plug 'junegunn/vim-easy-align'
+    "" easy motion
+        "Plug 'lokaltog/vim-easymotion'
+    "" better repeater
+        Plug 'tpope/vim-repeat'
+    "" user interface
+        Plug 'reedes/vim-colors-pencil'
+    "" show | in front of indent line
+        Plug 'Yggdroot/indentLine'
+    "" a better status line
+        Plug 'vim-airline/vim-airline'
+    "" resources
+        Plug 'shougo/denite.nvim'
+        Plug 'codepiano/ctrlp.vim'
+    "" session and more
+        Plug 'mhinz/vim-startify'
+        Plug 'xolox/vim-misc'
+        Plug 'xolox/vim-session'
+    "" auto completion
+        "Plug 'valloric/YouCompleteMe', { 'do': 'git submodule update --init --recursive;./install.py --gocode-completer' }
+        Plug 'ervandew/supertab'
+    "" snippet
+        "Plug 'sirver/ultisnips'
+        "Plug 'honza/vim-snippets', { 'do': 'cp $HOME/.vim/plugged/vim-snippets/UltiSnips/ $HOME/.vim/' }
+    "" syatastic
+        Plug 'scrooloose/syntastic'
+    "" nerds
+        Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+        Plug 'scrooloose/nerdcommenter'
+    "" debugger (, { 'on':  'VBGattachGDB' })
+        Plug 'Shougo/vimproc.vim', { 'do': 'make; cp -r $HOME/.vim/plugged/vimproc.vim/autoload $HOME/.vim/; cp -r $HOME/.vim/plugged/vimproc.vim/lib $HOME/.vim/' }
+        Plug 'idanarye/vim-vebugger', { 'do': 'cp -r $HOME/.vim/plugged/vim-vebugger/autoload $HOME/.vim/' }
+    "" tagbar --- use with exuberant-ctags ( 'on':  'TagbarToggle', )
+        Plug 'majutsushi/tagbar', { 'do': 'go get -u github.com/jstemmer/gotags' }
+    "" c/c++
+        "Plug 'vim-scripts/c.vim'
+    "" golang
+        "Plug 'fatih/vim-go'
+        "Plug 'nsf/gocode', { 'do': 'go get -u github.com/nsf/gocode; cp $HOME/.vim/plugged/gocode/vim/autoload/gocomplete.vim $HOME/.vim/autoload/' }
+    "" python
+        "Plug 'klen/python-mode'
+    "" latex
+        Plug 'gerw/vim-latex-suite'
+    "" pandoc and markdown
+        Plug 'vim-pandoc/vim-pandoc'
+        Plug 'vim-pandoc/vim-pandoc-syntax'
+    "" Vim's Org-Mode
+        "Plug 'jceb/vim-orgmode'
+    "" input chinese
+        "Plug 'vim-scripts/fcitx.vim'
+call plug#end()
+
+" SuperTab
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
+
+" UltiSnips
+"let g:UltiSnipsExpandTrigger           = '<Tab>'
+"let g:UltiSnipsJumpForwardTrigger      = '<Tab>'
+"let g:UltiSnipsJumpBackwardTrigger     = '<S-Tab>'
+
+" ycm
+"let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+
+" Ctrl-P
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" sessions
+let g:session_directory = $HOME . '/.vim/sessions'
+"" autosave/autoload? works or not?
+let g:session_autosave = 'yes' "works
+"let g:session_autoload = 'yes' "not work with vim-startify
+
+" easy motion
+"nmap <leader>m <Plug>(easymotion-s)
+"" nmap <....>. <Plug>(easymotion-t)
+
+" vim-debugger
+let g:vebugger_leader='<C-c>'
+"let g:vebugger_view_source_cmd='edit'
+
+" syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" EasyAlign (e.g. vipga, gaip)
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" vim-repeat
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
+
+" pymode
+let g:pymode_rope_lookup_project = 0
+let g:pymode_rope = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mode
@@ -208,7 +320,7 @@ set formatoptions+=n
 
 "show the tabes
 set list
-set listchars=tab:\|\ ,trail:-,extends:#,nbsp:.
+"set listchars=tab:\|\ ,trail:·,extends:#,nbsp:.
 
 "do not break words joined by the following characters
 set iskeyword+=_,@
@@ -284,7 +396,7 @@ set tm=500
 set foldcolumn=3
 
 " Increase the space between lines
-set linespace=3
+set linespace=6
 
 "show the command typing
 set showcmd
@@ -310,7 +422,7 @@ set cmdheight=2
 
 " colorscheme and background
 let $VIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme desert"pencil
+colorscheme pencil
 set background=light "dark "
 set t_ut=
 
@@ -328,11 +440,11 @@ hi ColorColumn NONE ctermbg=Cyan
 
 "set font
 "set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
-set guifont=DejaVu\ Sans\ Mono\ 14
+set guifont=DejaVu\ Sans\ Mono\ 12
 
 " add more components to statusline
 set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " display the status line always
@@ -714,5 +826,10 @@ augroup LargeFile
                 \ endif
 augroup END
 ```
+
+### Emacs
+
+Put `init.el` to ` C:\Users\mw\AppData\Roaming.emacs.d `
+
 
 ### Have fun!
