@@ -1,0 +1,13 @@
+#+begin_comment
+进入Windows10，先从 “设置 -> 更新和安全 -> 开发人员选项” 打开“开发人员模式”。
+再从“应用和功能”打开“适用Linux的Windows子系统” 或者直接运行下述命令 
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+重启后，到应用商店安装openSUSE
+
+然后再openSUSE中安装fish，安装ananconda，安装go，rust等，并配置路径
+
+以后在使用时，如果编辑文件等，就要Windows本地的应用。
+
+而需要运行shell命令，或者运行自己写的代码，就使用openSUSE子系统。
+#+end_comment
