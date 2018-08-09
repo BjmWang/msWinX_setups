@@ -829,7 +829,7 @@ augroup END
 
 ### Emacs
 
-Put `init.el` to ` C:\Users\mw\AppData\Roaming.emacs.d `
+Put `init.el` to ` C:\Users\mw\AppData\Roaming\.emacs.d `
 
 
 ### Have fun!
