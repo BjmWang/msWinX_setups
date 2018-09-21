@@ -125,7 +125,36 @@ end
 ```
 
 ## onsite
-### swift `CapsLock` to`Esc`
+### Python
+- install `anaconda`
+
+- install packages
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+
+#---
+
+pip install --upgrade pip
+
+pip install msgpack
+conda install py-xgboost  # conda install -c anaconda py-xgboost
+conda install lightgbm
+conda install catboost
+conda install tensorflow  # conda install -c conda-forge tensorflow 
+pip install python-xlib   # import Xlib
+pip install pyautogui
+
+wget https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/TA_Lib-0.4.17-cp36-cp36m-win_amd64.whl
+pip install TA_Lib-0.4.17-cp36-cp36m-win_amd64.whl
+```
+
+- startup script
+`ipython profile create` to creat `C:\Users\Me\.ipython\profile_default\ipython_config.py`,
+and edit it to fit my needs.
+
+### swift `CapsLock` to`Esc` (or just use `CODE` layout through [AutoHotKey](https://autohotkey.com/) )
 
 ```
 Windows Registry Editor Version 5.00 
