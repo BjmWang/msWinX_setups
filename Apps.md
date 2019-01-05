@@ -13,3 +13,4 @@
 - rust
 - git
 - firefox
+- IrfanView
