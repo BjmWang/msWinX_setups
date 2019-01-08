@@ -8,7 +8,8 @@
 - emacs
 ---
 - cmder
-- total commander
+- FreeCommander
+- everything
 - -git-
 ---
 - PDFXVwer
