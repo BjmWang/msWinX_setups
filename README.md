@@ -145,7 +145,9 @@ conda install catboost
 conda install tensorflow  # conda install -c conda-forge tensorflow 
 pip install python-xlib   # import Xlib
 pip install pyautogui
+pip install jupyterthemes
 
+jt  -t grade3 -f code
 wget https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/TA_Lib-0.4.17-cp36-cp36m-win_amd64.whl
 pip install TA_Lib-0.4.17-cp36-cp36m-win_amd64.whl
 ```
