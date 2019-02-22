@@ -10,7 +10,7 @@
 - cmder
 - FreeCommander
 - everything
-- -git-
+- launchy
 ---
 - PDFXVwer
 - IrfanView
