@@ -6,6 +6,7 @@
 - geany
 - gvim
 - emacs
+- VS code
 ---
 - cmder
 - FreeCommander
@@ -15,6 +16,7 @@
 - PDFXVwer
 - IrfanView
 - W.P.S.
+- OBS录屏
 ---
 - winrar
 - XunLei
