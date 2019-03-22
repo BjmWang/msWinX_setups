@@ -10,7 +10,7 @@
 - VS code
 ---
 - cmder
-- FreeCommander
+- [Double Commander](https://doublecmd.sourceforge.io/)
 - everything
 - launchy
 ---
