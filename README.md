@@ -175,6 +175,6 @@ Windows Registry Editor Version 5.00
 - put `_vimrc` to `D:\Vim\`
 
 ### Emacs
-Put `init.el` to ` C:\Users\mw\AppData\Roaming\.emacs.d `
+Put `init.el` to ` C:\Users\mw\AppData\Roaming\.emacs.d `, and comment the WQY font for han!
 
 ### Have fun!
