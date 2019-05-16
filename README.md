@@ -1,6 +1,68 @@
 # msWinX_setups
 to setup MS Windows 10 (R)
 
+## onsite
+### cmder
+在 `Settings->Startup->Environment` 添加
+```
+set LANG=zh_CN.UTF-8
+set LC_ALL=zh_CN.utf8
+```
+以显示中文.
+
+### Python
+- install `anaconda`
+
+- install packages
+```
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --set show_channel_urls yes
+
+#---
+
+pip install --upgrade pip
+
+pip install msgpack
+conda install py-xgboost  # conda install -c anaconda py-xgboost
+conda install lightgbm
+conda install catboost
+conda install tensorflow  # conda install -c conda-forge tensorflow 
+pip install python-xlib   # import Xlib
+pip install pyautogui
+pip install jupyterthemes
+
+jt  -t grade3 -f code
+wget https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/TA_Lib-0.4.17-cp36-cp36m-win_amd64.whl
+pip install TA_Lib-0.4.17-cp36-cp36m-win_amd64.whl
+```
+
+- startup script
+`ipython profile create` to creat `C:\Users\Me\.ipython\profile_default\ipython_config.py`,
+and edit it to fit my needs.
+
+### swift `CapsLock` to`Esc` (or just use `CODE` layout through [AutoHotKey](https://autohotkey.com/) )
+
+```
+Windows Registry Editor Version 5.00 
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout] 
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,01,00,3a,00,00,00,00,00
+```
+
+- save the above content to `caps2esc.reg`
+- double click `caps2esc.reg` to run it
+- confirm
+
+### Vimrc
+- install `Vim` to `D:\Vim` (donot install to `C:`)
+- backup `D:\Vim\_vimrc`
+- put [plug.vim](https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim) into `D:\Vim\vim81\plugin\`
+- put `_vimrc` to `D:\Vim\`
+
+### Emacs
+Put `init.el` to ` C:\Users\mw\AppData\Roaming\.emacs.d `, and comment the WQY font for han!
+
+
 ## WSL
 ### Install `Python`:
 - Download `Anaconda` from [here](https://anaconda.com/download/),  and
@@ -123,58 +185,5 @@ if test -r ~/.config/fish/local.fish
   . "~/.config/fish/local.fish"
 end
 ```
-
-## onsite
-### Python
-- install `anaconda`
-
-- install packages
-```
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
-conda config --set show_channel_urls yes
-
-#---
-
-pip install --upgrade pip
-
-pip install msgpack
-conda install py-xgboost  # conda install -c anaconda py-xgboost
-conda install lightgbm
-conda install catboost
-conda install tensorflow  # conda install -c conda-forge tensorflow 
-pip install python-xlib   # import Xlib
-pip install pyautogui
-pip install jupyterthemes
-
-jt  -t grade3 -f code
-wget https://download.lfd.uci.edu/pythonlibs/h2ufg7oq/TA_Lib-0.4.17-cp36-cp36m-win_amd64.whl
-pip install TA_Lib-0.4.17-cp36-cp36m-win_amd64.whl
-```
-
-- startup script
-`ipython profile create` to creat `C:\Users\Me\.ipython\profile_default\ipython_config.py`,
-and edit it to fit my needs.
-
-### swift `CapsLock` to`Esc` (or just use `CODE` layout through [AutoHotKey](https://autohotkey.com/) )
-
-```
-Windows Registry Editor Version 5.00 
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout] 
-"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,01,00,3a,00,00,00,00,00
-```
-
-- save the above content to `caps2esc.reg`
-- double click `caps2esc.reg` to run it
-- confirm
-
-### Vimrc
-- install `Vim` to `D:\Vim` (donot install to `C:`)
-- backup `D:\Vim\_vimrc`
-- put [plug.vim](https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim) into `D:\Vim\vim81\plugin\`
-- put `_vimrc` to `D:\Vim\`
-
-### Emacs
-Put `init.el` to ` C:\Users\mw\AppData\Roaming\.emacs.d `, and comment the WQY font for han!
 
 ### Have fun!
