@@ -27,6 +27,8 @@ pip install msgpack
 conda install py-xgboost  # conda install -c anaconda py-xgboost
 conda install lightgbm
 conda install catboost
+conda install -c conda-forge jupyterlab
+
 conda install tensorflow  # conda install -c conda-forge tensorflow 
 pip install python-xlib   # import Xlib
 pip install pyautogui
