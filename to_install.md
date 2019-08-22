@@ -3,6 +3,7 @@
 - Anaconda3
 - Chrome
 - firefox
+- git
 ---
 - geany
 - gvim
