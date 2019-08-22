@@ -19,7 +19,7 @@
 - W.P.S.
 - OBS录屏
 ---
-- winrar
+- bandizip
 - XunLei
 ---
 - Visual Studio buildtool & code
