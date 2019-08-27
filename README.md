@@ -63,7 +63,10 @@ Windows Registry Editor Version 5.00
 - put [plug.vim](https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim) into `D:\Vim\vim81\plugin\autoload`
 - put `_vimrc` to `D:\Vim\`
 
+---
 - `neovim`: `C:/Users/xxx/AppData/Local/nvim/`
+    + `init.vim`
+    + `autoload\plug.vim`
 
 ### Emacs
 Put `init.el` to ` C:\Users\mw\AppData\Roaming\.emacs.d `, and comment the WQY font for han!
