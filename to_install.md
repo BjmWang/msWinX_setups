@@ -10,7 +10,8 @@
 - emacs
 - VS code
 ---
-- cmder
+- [mobaXterm](https://mobaxterm.mobatek.net/)
+- [cmder](https://cmder.net/)
 - [Double Commander](https://doublecmd.sourceforge.io/)
 - everything
 - launchy
@@ -24,7 +25,7 @@
 - XunLei
 ---
 - Visual Studio buildtool & code
-- WSL - openSUSE
+- WSL
 - golang
 - rust
 
